@@ -1,0 +1,38 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-image: url(../images/bg.png);
+    background-size: cover;
+}
+
+header{
+    margin: 20px;
+}
+
+header h1{
+    color: rgb(188, 255, 255);
+    text-shadow: 2px 2px 4px black;
+    box-shadow: 2px 2px 5px rgb(33, 229, 255);
+    background-color: white;
+    padding: 10px;
+    border-radius: 39%;
+}
+
+.card-game{
+    height: 175px;
+    width: 120px;
+    background-image: url(../images/cardback.png);
+    background-size: cover;
+    cursor: pointer;
+    display: inline-block;
+    margin: 10px;
+}
+
+.card-game:active {
+  transform: scale(0.97);
+    transition: transform .2s;
+}
+
+.card-game.flip {
+    transform: rotateY(180deg);
+  }

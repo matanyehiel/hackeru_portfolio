@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="../back.css">
+    <script src="script/script.js"></script>
+    <title>styleIt</title>
+</head>
+
+<body>
+        <div id="back"><a href="../../index.html"><img src="../back.png" style="width:65px;height:65px;"></a></div>
+    <header class="container-fluid">
+        <div class="row">
+            <nav id="navbar"
+                class="col-md-12 navbar navbar-expand-lg navbar-light border-bottom border-light default-color">
+                <a href="index.html" class="navbar-brand"><img id="sicon" src="images/sicon.png">tyle it</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a href="#code" class="nav-link" onclick="getCode()">Get code!</a>
+                        </li>
+                        <li class="nav-item" onclick="reset()">
+                            <a class="nav-link">Reset</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section id="main" class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div id="uStyle" class="col-md-6">
+                <h1><img src="images/logo.png" alt="logo"></h1>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <form class="form-group">
+                    <div class="input-group mb-3">
+                        <select id="uElement" onchange="selectElement()" class="selectpicker btn-info"
+                            data-style="btn-info">
+                            <option value="h1" selected="selected">H1</option>
+                            <option value="p">P</option>
+                            <option value="div">Div</option>
+                            <option value="button">Button</option>
+                            <option value="input">Input</option>
+                        </select>
+                        <input type="text" id="inputText" oninput="userInput()" class="form-control form-control-lg"
+                            aria-label="Text input with dropdown button" placeholder="inner HTML...">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="accordion">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h5 class="mb-0">
+                                <button id="propertiesButton" class="btn btn-link" data-toggle="collapse"
+                                    data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    Dropdown to detail this <span id="propertiesTag">h1</span>
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                            data-parent="#accordion">
+                            <div class="card-body">
+                                <form>
+                                    <label>Height: </label>
+                                    <input type="number" id="uHeight">
+                                    <label>Width: </label>
+                                    <input type="number" id="uWidth"><br><br>
+                                    <label><strong>Border: </strong></label><br>
+                                    <select id="uBorder">
+                                        <option value="0" selected>Border - NONE</option>
+                                        <option value="border">Border - ALL</option>
+                                        <option value="borderTop">Border - TOP</option>
+                                        <option value="borderBottom">Border - BOTTOM</option>
+                                        <option value="borderLeft">Border - LEFT</option>
+                                        <option value="borderRight">Border - RIGHT</option>
+                                    </select>
+                                    <label> Border width(px): </label>
+                                    <input type="number" id="uBorderWidth"><br>
+                                    <label>Border style: </label>
+                                    <select id="uBorderStyle">
+                                        <option value="solid">solid</option>
+                                        <option value="dashed">dashed</option>
+                                        <option value="dotted">dotted</option>
+                                    </select><br>
+                                    <label>Border color: </label>
+                                    <input type="color" id="uBorderColor"><br><br>
+                                    <label><strong>Font: </strong></label><br>
+                                    <label>Font family: </label>
+                                    <select id="uFontFamily">
+                                        <option value="arial">Arial</option>
+                                        <option value="cursive">Cursive</option>
+                                        <option value="impact">Impact</option>
+                                    </select><br>
+                                    <label>Font size: </label>
+                                    <input type="number" id="uFontSize"><br><br>
+                                    <label>Font weight<small>(100-900)</small>: </label>
+                                    <input type="number" id="uFontWeight"><br><br>
+                                    <label>Text shadow: </label>
+                                    <input type="text" id="uTextShadow"><br><br>
+                                    <label>Text decoration: </label>
+                                    <select id="uTextDecoration">
+                                        <option value="none">none</option>
+                                        <option value="overline">overline</option>
+                                        <option value="underline">underline</option>
+                                        <option value="line-through">line-through</option>
+                                    </select><br>
+                                    <label>color: </label>
+                                    <input type="color" id="uColor"><br>
+                                    <label>background color: </label>
+                                    <input type="color" id="uBackgroundColor"><br>
+                                    <label>Text align: </label>
+                                    <select id="uTextAlign">
+                                        <option value="center">center</option>
+                                        <option value="right">right</option>
+                                        <option value="left">left</option>
+                                    </select><br>
+                                    <a href="#code" class="btn btn-info" onclick="getCode()">Get Code!</a>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+        </div>
+    </section>
+    <section id="code" class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+                <figure class="col-md-6">
+                    <figcaption>Your code...</figcaption>
+                    <pre>
+                        <code id="uCode" class="language-markup language-css language-clike language-javascript">
+                        </code>
+                    </pre>
+                </figure>
+            <div class="col-md-3"></div>
+        </div>
+    </section>
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                Matan Yehiel ©
+            </div>
+        </div>
+    </footer>
+    <!--
+        Bootstrap
+    -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

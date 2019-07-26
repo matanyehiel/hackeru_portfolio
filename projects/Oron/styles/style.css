@@ -1,0 +1,64 @@
+body{
+    text-align: center;
+    font-family: arial;
+    direction: rtl;
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+}
+table tfoot{
+  background-color: aquamarine;
+}
+table tfoot tr:hover{
+  background-color: rgb(108, 216, 180);
+}
+
+table {
+    border-collapse: collapse;
+    width: 60%;
+    margin: 0 auto;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  tr:hover {background-color:#f5f5f5;}
+
+  #site{
+    margin: 100px auto;
+    border-radius: 20%;
+    background-color: rgb(183, 255, 231);
+    box-shadow: 2px 4px 10px black;
+  }
+
+  #num1 , #op , #num2{
+    border: 1px solid white;
+    padding: 10px;
+    box-shadow: 2px 2px 4px black;
+    background-color: #ddd;
+  }
+
+  #uMessage{
+    height: 20px;
+  }
+
+  #site > div > div > button{
+    margin-bottom: 10px;
+  }
+
+  div div h1{
+    font-size: 72px;
+    background: -webkit-linear-gradient(rgb(0, 255, 170), rgb(107, 190, 186));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 4px 3px 3px rgb(229, 252, 255);
+  }
+
+  #displayNum{
+    font-size: 36px;
+    color: #f5f5f5;
+    text-shadow: 2px 3px 4px cadetblue;
+    border-top: 8px dotted rgb(86, 159, 255);
+  }

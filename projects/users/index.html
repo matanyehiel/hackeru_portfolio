@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="../back.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="scripts/script.js"></script>
+    <title>Users</title>
+</head>
+
+<body onload="disableSubmit()">
+    <div id="back"><a href="../../index.html"><img src="../back.png" style="width:65px;height:65px;"></a></div>
+    <header class="container-fluid text-center">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <h1 class="col-md-4">Users</h1>
+            <div class="col-md-4"></div>
+        </div>
+    </header>
+    <section id="container" class="container">
+        <div class="row">
+            <div id="register" class="col-md-8">
+                <h2>Register</h2>
+                <hr>
+                <form>
+                    <input type="text" id="uName" class="fadeIn second" placeholder="user name" required><br>
+                    <input type="password" id="uPass" class="fadeIn second" placeholder="Password" required><br>
+                    <input type="password" id="uConfirmPass" class="fadeIn second" placeholder="Confirm password"
+                        required><br>
+                    <input type="email" id="uEmail" class="fadeIn second" placeholder="Email" required><br>
+                    <input type="checkbox" name="terms" id="terms" onchange="activateButton(this)"> I Agree Terms &
+                    Coditions
+                    <button id="signin" onclick="register()" type="button"
+                        class="btn btn-outline-secondary">Sign-in</button>
+                </form>
+                <footer id="uMessage">
+
+                </footer>
+            </div>
+            <div id="login" class="col-md-4">
+                <h2>Login</h2>
+                <hr>
+                <label>username: </label><br>
+                <input type="text" id="uNameLogin" class="fadeIn second" name="login"><br>
+                <label>Password: </label><br>
+                <input type="password" id="uPassLogin" class="fadeIn second" name="login"><br><br>
+                <button onclick="login()" type="button" class="btn btn-outline-secondary">Log in</button>
+                <footer id="loginMessage">
+
+                </footer>
+            </div>
+        </div>
+    </section>
+    <footer class="container-fluid">
+
+    </footer>
+</body>
+
+</html>

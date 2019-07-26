@@ -1,0 +1,89 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(255, 238, 0);
+}
+
+#w1,#w2,#w3{
+    border: 1px solid rgb(235, 235, 235);
+    text-align: center;
+    min-height: 500px;
+}
+
+#messageForUser{
+    color: rgb(255, 238, 0);
+    text-transform: uppercase;
+    text-align: center;
+    background-color: black;
+    opacity: 0;
+    padding-top: 15px;
+}
+
+#w1 h4{
+    font-size: 18px;
+    font-weight: normal;
+}
+
+#level{
+    background-color: rgb(255, 119, 41);
+    text-shadow: 1px 2px 2px rgb(255, 38, 0);
+    color: white;
+}
+
+#bamba{
+    cursor: pointer;
+    height: 200px;
+    width: 200px;
+}
+
+input{
+    width: 55px;
+    background-color: rgb(255, 249, 166);
+    border: 1px solid rgb(255, 206, 100);
+    border-radius: 40%;
+    text-align: center;
+}
+
+.store-img{
+    height: 30px;
+    width: 30px;
+}
+
+#logo , footer{
+    background-color: rgb(255, 238, 0);
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 2px 2px 6px rgb(114, 114, 1);
+}
+
+a.tip {
+    text-decoration: none
+}
+a.tip:hover {
+    cursor: help;
+    position: relative
+}
+a.tip span {
+    display: none
+}
+a.tip:hover span {
+    border: #c0c0c0 1px dotted;
+    padding: 5px 20px 5px 5px;
+    display: block;
+    z-index: 100;
+    background: url(../images/helpbg.jpg) #f0f0f0 no-repeat 100% 5%;
+    left: 0px;
+    margin: 10px;
+    width: 250px;
+    position: absolute;
+    top: 10px;
+    text-decoration: none
+}
+
+#missionSection{
+    background-color: #f3f3f3;
+}
+
+footer{
+    height: 120px;
+    font-weight: normal;
+}

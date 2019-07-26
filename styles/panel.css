@@ -1,0 +1,46 @@
+#logo{
+    background-image: linear-gradient(rgb(44, 100, 255) , black);
+    height: 400px;
+    padding: 50px;
+}
+
+#emails{
+    padding: 20px;
+    min-height: 400px;
+    background-image: linear-gradient(white , rgb(192, 192, 192));
+}
+
+.email{
+    border-bottom: 1px solid rgb(177, 177, 177);
+    background-color: rgb(231, 231, 231);
+    padding: 10px;
+    margin: 4px;
+    text-align: left;
+    font-style: italic;
+    min-height: 200px;
+}
+
+.email h3{
+    font-size: 26px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: inline-block;
+    font-style: normal;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgb(1, 1, 43);
+}
+
+.email:hover{
+    background-color: rgb(226, 219, 219);
+}
+
+.date{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-style: italic;
+    font-size: 20px;
+}
+
+section{
+    padding: 20px;
+}

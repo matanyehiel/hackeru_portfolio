@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="scripts/script.js"></script>
+    <link rel="shortcut icon" href="images/bamba.png" type="image/png" />
+    <link rel="stylesheet" href="../back.css">
+    <title>Bamba clicker</title>
+</head>
+
+<body>
+    <div id="back"><a href="../../index.html"><img src="../back.png" style="width:65px;height:65px;"></a></div>
+    <div class="container-fluid">
+        <header id="logo" class="row">
+            <div class="col-md-3"></div>
+            <h1 class="col-md-6">Bamba Clicker :)</h1>
+            <div id="messageForUser" class="col-md-3"></div>
+        </header>
+        <section class="row">
+            <div id="w1" class="col-md-3">
+                <h3 onclick="changeFactoryName()"><span id="factoryName"></span>'s factory</h3>
+                <h2><span id="bambotTotal">0</span> Bambot</h2>
+                <img id="bamba" onclick="clickMe(this)" src="images/levels/BambaParpar.jpg" alt="BambaParpar">
+                <div id="level"><span id="bambaLevel">Parpar</span> Bamba lvl.</div>
+                <h4><span id="perSec">0</span> Bambot per sec.</h4>
+                <h4><span id="perClick">0</span> Bambot per click.</h4>
+                <h4><span id="clicksInTotal">0</span> clicks in total.</h4>
+            </div>
+            <div id="w2" class="col-md-6">
+                <div class="row">
+                    <div id="missionSection" class="col-md-12">
+                        <h2>Missions</h2>
+                        <div id="missionForUser">
+                            <p>If you feel that you are ready enough to go through the tasks that are being done for
+                                you,
+                                press the button to start the adventure!</p>
+                            <button class="btn btn-warning btn-lg" onclick="startMission()">Start!</button>
+                        </div>
+                    </div>
+                </div>
+                <img src="images/bamba.png">
+            </div>
+            <div id="w3" class="col-md-3">
+                <h2>Store</h2>
+                <a class="tip"><img class="store-img tip" src="images/cursor.png"><span><strong>Cost:</strong> 5
+                        bambot.<br><strong>Bambot per click:
+                        </strong>+1<br><strong>Bambot per sec: </strong> +0</span></a>
+                <label>Cursor(5b): </label><button onclick="plus('cursor' , 5 , 1 , 0)"
+                    class="btn btn-warning btn-sm">+</button> <input id="cursor" type="number" value="0" disabled>
+                <hr>
+                <a class="tip"><img class="store-img" src="images/chinese.png" alt=""><span><strong>Cost:</strong> 100
+                        bambot.<br><strong>Bambot per click:
+                        </strong>+2<br><strong>Bambot per sec: </strong> +10</span></a>
+
+                <label>Chinese(100b): </label><button onclick="plus('chinese' , 100 , 2 , 10)"
+                    class="btn btn-outline-warning btn-sm">+</button><input id="chinese" type="number" value="0"
+                    disabled>
+                <hr>
+                <a class="tip"><img class="store-img" src="images/director.jpg" alt=""><span><strong>Cost:</strong> 1000
+                        bambot.<br><strong>Bambot per click:
+                        </strong>+25<br><strong>Bambot per sec: </strong> +80</span></a>
+
+                <label>Director(1,000b): </label><button onclick="plus('director' , 1000 , 25 , 80)"
+                    class="btn btn-warning btn-sm">+</button><input id="director" type="number" value="0" disabled>
+                <hr>
+                <a class="tip"> <img class="store-img" src="images/factory.jpg" alt=""><span><strong>Cost:</strong>
+                        10,000 bambot.<br><strong>Bambot per click:
+                        </strong>+150<br><strong>Bambot per sec: </strong> +1000</span></a>
+
+                <label>Factory(10,000b): </label><button onclick="plus('factory' , 10000 , 150 , 1000)"
+                    class="btn btn-outline-warning btn-sm">+</button><input id="factory" type="number" value="0"
+                    disabled>
+                <hr>
+                <a class="tip"> <img class="store-img" src="images/bank.png" alt=""><span><strong>Cost:</strong> 100,000
+                        bambot.<br><strong>Bambot per click:
+                        </strong>+1500<br><strong>Bambot per sec: </strong> +800</span></a>
+
+                <label>Bank(100,000b): </label><button onclick="plus('bank' , 100000 , 1500 , 800)"
+                    class="btn btn-warning btn-sm">+</button><input id="bank" type="number" value="0" disabled>
+                <hr>
+                <a class="tip"> <img class="store-img" src="images/country.png" alt=""><span><strong>Cost:</strong>
+                        1,000,000 bambot.<br><strong>Bambot per click:
+                        </strong>+10,000<br><strong>Bambot per sec: </strong> +10,000</span></a>
+
+                <label>Country(1,000,000b): </label><button onclick="plus('country' , 1000000 , 10000 , 10000)"
+                    class="btn btn-outline-warning btn-sm">+</button><input id="country" type="number" value="0"
+                    disabled>
+                <hr>
+                <a class="tip"> <img class="store-img" src="images/mainland.png" alt="">
+                    <span><strong>Cost:</strong> 10,000,000 bambot.<br><strong>Bambot per click:
+                        </strong>+150,000<br><strong>Bambot per sec: </strong> +150,000</span></a>
+                <label>Main land(10,000,000b): </label><button onclick="plus('mainland' , 10000000 , 150000 , 150000)"
+                    class="btn btn-warning btn-sm">+</button><input id="mainland" type="number" value="0" disabled>
+            </div>
+        </section>
+        <footer class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">by Matan Yehiel the bambaman ©</div>
+            <div class="col-md-4"></div>
+        </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+        $("#w1 h3").mouseenter(function(){
+            $(this).css({"cursor" : "pointer" , "text-shadow" : "1px 2px 3px gray"})
+        });
+        $("#w1 h3").mouseleave(function(){
+            $(this).css({"cursor" : "auto" , "text-shadow" : "none"})
+        });
+        $("#w2 img").hide();
+    </script>
+</body>
+
+</html>

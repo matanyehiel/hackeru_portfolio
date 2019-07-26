@@ -1,0 +1,268 @@
+        body {
+            direction: rtl;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: right;
+        }
+
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        h2 {
+            position: absolute;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: #f2ff44;
+            color: black;
+        }
+
+        #bg {
+            background-image: url("../images/bg.jpg");
+            background-size: 550px;
+            width: 100%;
+            height: 400px;
+            position: relative;
+        }
+
+        #i1 {
+            position: fixed;
+            top: 10%;
+            left: 20px;
+            z-index: 1;
+        }
+
+        #i2 {
+            position: fixed;
+            top: 22%;
+            left: 20px;
+            z-index: 2;
+        }
+
+        #i3 {
+            position: fixed;
+            top: 34%;
+            left: 20px;
+            z-index: 2;
+        }
+
+        h1 {
+            position: absolute;
+            color: #25261e;
+            font-family: "Great Vibes", cursive;
+            font-size: 165px;
+            line-height: 160px;
+            font-weight: normal;
+            margin-bottom: 0px;
+            margin-top: 40px;
+            text-align: center;
+            text-shadow: 0 1px 1px #929b17;
+            top: 65px;
+            right: 60px;
+        }
+
+
+        .hr{
+            height: 1px; 
+            background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+            background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+            background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+            background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
+        }
+
+        .block {
+            background-color: white;
+            width: 100%;
+            height: 350px;
+            position: relative;
+        }
+
+        .block2 {
+            background-color: #ebebe0;
+            width: 100%;
+            position: relative;
+
+        }
+
+        #pp {
+            font-style: italic;
+            width: 200px;
+            display: inline-block;
+            position: absolute;
+            top: 20%;
+            right: 45%;
+        }
+
+        #pp2 {
+            display: inline-block;
+            position: absolute;
+            top: 20%;
+            right: 35%;
+        }
+
+        .img {
+            height: 100px;
+            width: 100px;
+            background-color: white;
+            border: 1px solid black;
+            display: inline-block;
+            box-shadow: 1px 1px 3px #888888;
+            transition: transform 400ms;
+        }
+
+        .img:hover {
+            transform: scale(2 , 2);
+
+        }
+
+        #img1{
+            background-image: url("../images/pok1.jpg");
+            background-size: 100px;
+        }
+
+        #img2{
+            background-image: url("../images/pok2.jpg");
+            background-size: 100px;
+        }
+
+        #img3{
+            background-image: url("../images/pok3.jpg");
+            background-size: 100px;
+        }
+
+        #img4{
+            background-image: url("../images/pok4.png");
+            background-size: 100px;
+        }
+
+        #img5{
+            background-image: url("../images/pok5.png");
+            background-size: 100px;
+        }
+
+        #img6{
+            background-image: url("../images/pok6.jpg");
+            background-size: 100px;
+        }
+
+        #img7{
+            background-image: url("../images/pok7.png");
+            background-size: 100px;
+        }
+
+        #img8{
+            background-image: url("../images/pok8.jpg");
+            background-size: 100px;
+        }
+
+        #img9{
+            background-image: url("../images/pok9.jpg");
+            background-size: 100px;
+        }
+        .center {
+            width: 350px;
+            margin: 0 auto;
+            padding: 100px;
+        }
+
+        .gh2 {
+            position: absolute;
+            top: 20px;
+            right: 45%;
+        }
+
+        .button {
+            background-color: #f2ff44;
+            border: none;
+            color: rgb(184, 160, 25);
+            padding: 15px 32px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 32%;
+            font-weight: bolder;
+
+        }
+
+       
+        .button:hover {
+            opacity: 0.8;
+            border: none;
+            color: black;
+            transform:  scale(1.05 , 1.05);
+        
+            box-shadow: 0 1px 7px black;
+            transition: transform 300ms , opacity 500ms , box-shadow 300ms;
+        }
+
+
+
+        #end {
+            width: 100%;
+            height: 220px;
+            background-image: linear-gradient(to right, red, yellow);
+            margin: 0;
+            padding: 0;
+            position: relative;
+            z-index: 3;
+        }
+
+        #cred{
+            column-count: 3;
+            column-width: 200px;
+            column-gap: 200px;
+            column-rule: 2px outset red;
+            padding: 25px;
+            letter-spacing: 1px;
+        }
+
+        #cred a{
+            text-decoration: none;
+            font-weight: bold;
+            font-family: cursive;
+            color: rgb(255, 248, 151);
+            text-shadow: 1px 1px 2px black;
+        }
+        input {
+            background-color: transparent;
+            border: 0px solid;
+            height: 25px;
+            width: 100%;
+        }
+
+        textarea {
+            border: 0px solid;
+            height: 100%;
+            
+        }
+        input , textarea{
+            margin: 5px 0;
+        }
+        input:focus , textarea:focus{
+            background-color: rgb(255, 255, 246);
+            border-bottom: 3px solid rgb(229, 255, 0);
+            outline: none;
+        }

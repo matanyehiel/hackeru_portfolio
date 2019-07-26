@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="projects/back.css">
+    <link rel="shortcut icon" type="image/x-icon" href="icons/favicon.ico" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/panel.css">
+    <script src="scripts/script.js">
+    </script>
+    <title>Portfolio - Matan Yehiel ©</title>
+</head>
+
+<body>
+    <header class="container-fluid">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-dark col-md-12">
+                <a href="index.html" class="navbar-brand">Matan Yehiel <img id="me" src="images/me.png"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#logo">Back</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="logout()">Log-out</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section class="container-fluid text-center" id="logo">
+        <div class="row">
+            <div class="col-md-12">
+                <img src="images/panellogo.png" alt="">
+            </div>
+        </div>
+    </section>
+    <section id="about" class="container-fluid text-center">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <h2 class="col-md-4">About:</h2>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="form-group col-md-6">
+                <textarea id="textAbout" class="form-control" rows="5"></textarea>
+                <button onclick="updateAbout()" class="btn btn-primary btn-lg">Update</button>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </section>
+    <hr>
+    <section id="emails" class="container-fluid text-center">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <h2 class="col-md-4">Emails:</h2>
+            <div class="col-md-4"></div>
+        </div>
+    </section>
+    <footer class="container-fluid text-center">
+        <div class="row">
+            <div class="col-md-4 col-sm-4 col-4">
+            </div>
+            <div class="col-md-4 col-sm-4 col-4 small text-light">
+                כל הזכויות שמורות למתן יחיאל ©
+            </div>
+            <div class="col-md-4 col-sm-4 col-4">
+            </div>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+
+        $("#textAbout").val(localStorage.getItem("aboutMe"));
+
+        function updateAbout(){
+            localStorage.setItem("aboutMe" , document.getElementById("textAbout").value );
+        }
+
+        function clearMail(x) {
+            var split = x.id.split("-");
+            var id = split[1];
+            localStorage.removeItem("firstname-" + id);
+            localStorage.removeItem("lastname-" + id);
+            localStorage.removeItem("email-" + id);
+            localStorage.removeItem("ref-" + id);
+            localStorage.removeItem("text-" + id);
+            $("#row-" + id).remove();
+        }
+        $(document).ready(function () {
+            if (localStorage.getItem("logged") == "false") {
+                $("*").hide();
+                console.log("You have no ACCESS for this page.");
+                location.href = "index.html";
+            }
+
+            for (var i = 0; i < parseInt(localStorage.getItem("mailCount")); i++) {
+                var email = (localStorage.getItem("mail" + i));
+                var fname = localStorage.getItem("firstname-" + i);
+                var lname = localStorage.getItem("lastname-" + i);
+                var email = localStorage.getItem("email-" + i);
+                var ref = localStorage.getItem("ref-" + i);
+                var text = localStorage.getItem("text-" + i);
+                var date = localStorage.getItem("date-" + i);
+                console.log(email);
+
+                if (fname == null || lname == null || email == null || text == null) {
+
+                } else {
+                    $("#emails").append("<div id='row-" + i + "' class='row'><div class='col-md-2'><button class='btn btn-danger btn-sm' onclick='clearMail(this)' id='btn-" + i + "'>delete</button></div><div id='inp" + i + "' class='col-md-8 email'></div><div class='col-md-2'></div></div>");
+                    $("#inp" + i).append("<h3>full name:</h3> " + fname + " " + lname);
+                    $("#inp" + i).append("<br>");
+                    $("#inp" + i).append("<h3>email:</h3> " + email);
+                    $("#inp" + i).append("<br>");
+                    $("#inp" + i).append("<h3>refference type:</h3> " + ref);
+                    $("#inp" + i).append("<br>");
+                    $("#inp" + i).append("<h3>message:</h3> " + text);
+                    $("#inp" + i).append("<br>");
+                    $("#inp" + i).append("<span class='date'>" + date + "</span>");
+                }
+
+            }
+            console.log(localStorage.getItem("mailCount"));
+            $("#navbarSupportedContent ul li").css({ "cursor": "pointer" });
+            var $navi = $("header"), scrollTop = 0;
+            $navi.hide();
+            $navi.slideDown(650);
+            $(window).scroll(function () {
+                var y = $(this).scrollTop(), speed = 0.05, pos = y * speed, maxPos = 100;
+                if (y > scrollTop) {
+                    pos = maxPos;
+                } else {
+                    pos = 0;
+                }
+                scrollTop = y;
+
+
+
+                $navi.css({
+                    "-webkit-transform": "translateY(-" + pos + "%)",
+                    "-moz-transform": "translateY(-" + pos + "%)",
+                    "-o-transform": "translateY(-" + pos + "%)",
+                    "transform": "translateY(-" + pos + "%)",
+                    "transition": "300ms transform"
+                });
+
+
+
+            });
+        });
+    </script>
+</body>
+
+</html>

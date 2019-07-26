@@ -1,0 +1,62 @@
+body{
+    background-color: white;
+    font-family: arial;
+    text-align: center;
+    direction: ltr;
+}
+header{
+    font-family: cursive;
+    background-color: #7fffd4;
+}
+
+#navbar{
+    height: 60px;
+}
+
+
+#sicon{
+    height: 50px;
+    width: 50px;
+    padding-bottom: 10px;
+}
+
+#main{
+    min-height: 400px;
+    margin-bottom: 70px;
+    margin-top: 70px;
+}
+
+#uStyle{
+    padding-bottom: 40px;
+    margin: 0 auto;
+}
+
+#propertiesButton{
+    color: #7a7c7f;
+    font-size: 20px;
+    font-family: "Libre Baskerville", serif;
+    line-height: 20px;
+    text-align: center;
+    text-shadow: 0 1px 1px #fff; 
+    padding-top: 10px;
+}
+
+pre {
+    …
+    background-color: #FCFDFC;
+    background-repeat: repeat-y;
+    background-position: 0 -1rem;
+    background-size: auto 4rem;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg stroke-width='2' stroke='%23EDF3ED' width='1224' height='64' viewBox='0 0 1224 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,0L1224,0'/%3E%3Cpath d='M0,4l1224,0'/%3E%3Cpath d='M0,8l1224,0'/%3E%3Cpath d='M0,12l1224,0'/%3E%3Cpath d='M0,16l1224,0'/%3E%3Cpath d='M0,20l1224,0'/%3E%3Cpath d='M0,24l1224,0'/%3E%3Cpath d='M0,28l1224,0'/%3E%3C/svg%3E");
+  }
+
+footer{
+    background-image: linear-gradient(#5acfa8 , #61e7ba);
+    border-top: 1px solid #59d4abd0;
+    height: 35px;
+    padding: 5px;
+    color: #127250;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+}
